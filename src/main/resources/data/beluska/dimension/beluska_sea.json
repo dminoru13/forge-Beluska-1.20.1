@@ -1,0 +1,11 @@
+{
+  "type": "beluska:beluska_sea",
+  "generator": {
+    "type": "beluska:beluska_sea",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:plains"
+    },
+    "settings": "minecraft:overworld"
+  }
+}
