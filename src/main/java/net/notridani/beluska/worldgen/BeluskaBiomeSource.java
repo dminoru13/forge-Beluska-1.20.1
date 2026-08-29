@@ -81,7 +81,7 @@ public class BeluskaBiomeSource extends BiomeSource {
 
         if (blockY < 50) {
             if(erosao > 0.5) {
-                return bioma("oceano_muito_frio");
+                return bioma("fenda_abissal");
             }
 
         }
