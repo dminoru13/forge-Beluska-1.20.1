@@ -8,6 +8,7 @@
         "oceano": "minecraft:ocean",
         "oceano_quente": "minecraft:warm_ocean",
         "oceano_frio": "minecraft:deep_frozen_ocean",
+        "oceano_muito_frio": "minecraft:frozen_ocean",
         "praia_de_pedra": "minecraft:stony_shore",
         "taiga_antiga": "minecraft:old_growth_spruce_taiga",
         "taiga_nevada": "minecraft:snowy_taiga",

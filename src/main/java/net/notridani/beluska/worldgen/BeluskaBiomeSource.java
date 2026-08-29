@@ -64,11 +64,12 @@ public class BeluskaBiomeSource extends BiomeSource {
             if (temperatura > 0.6) return bioma("taiga_antiga");
             if (temperatura > 0.3) return bioma("praia_de_pedra");
             if (temperatura > -0.2) return bioma("taiga_nevada");
-            if (temperatura > -0.8) return bioma("espinhos_de_gelo");
+            if (temperatura > -1.8) return bioma("espinhos_de_gelo");
 
             }
 
         if (blockY > 150) {
+            if (temperatura < -0.7) return bioma("oceano_muito_frio");
             if (temperatura < 0.5) return bioma("oceano_frio");
             return bioma("oceano");
         }
