@@ -53,6 +53,7 @@ public class BeluskaBiomeSource extends BiomeSource {
 
         float profundidade = Climate.unquantizeCoord(clima.depth());
         float temperatura = Climate.unquantizeCoord(clima.temperature());
+        float erosao = Climate.unquantizeCoord(clima.erosion());
 
         int blockY = QuartPos.toBlock(quartY);
 
@@ -76,6 +77,13 @@ public class BeluskaBiomeSource extends BiomeSource {
 
         if (blockY > 100 && blockY < 150) {
            return bioma("oceano_quente");
+        }
+
+        if (blockY < 50) {
+            if(erosao > 0.5) {
+                return bioma("oceano_muito_frio");
+            }
+
         }
 
 

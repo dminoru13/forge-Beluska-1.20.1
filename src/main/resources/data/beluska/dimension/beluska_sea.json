@@ -13,7 +13,8 @@
         "taiga_antiga": "minecraft:old_growth_spruce_taiga",
         "taiga_nevada": "minecraft:snowy_taiga",
         "espinhos_de_gelo": "minecraft:ice_spikes",
-        "montanha": "minecraft:windswept_hills"
+        "montanha": "minecraft:windswept_hills",
+        "fenda_abissal": "alexscaves:abyssal_chasm"
       }
     },
     "settings": "beluska:beluska_sea"
