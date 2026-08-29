@@ -3,8 +3,10 @@
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
-      "type": "minecraft:multi_noise",
-      "preset": "beluska:beluska_sea"
+      "type": "beluska:beluska",
+      "oceano": "minecraft:ocean",
+      "planicie": "minecraft:plains",
+      "montanha": "minecraft:windswept_hills"
     },
     "settings": "beluska:beluska_sea"
   }

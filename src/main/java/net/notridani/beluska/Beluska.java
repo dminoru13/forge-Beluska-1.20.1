@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.notridani.beluska.worldgen.BeluskaBiomeSources;
 import org.slf4j.Logger;
 
 @Mod(Beluska.MOD_ID)
@@ -25,6 +26,7 @@ public class Beluska
 
     public Beluska(FMLJavaModLoadingContext context)
     {
+
         IEventBus modEventBus = context.getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
@@ -34,6 +36,9 @@ public class Beluska
         modEventBus.addListener(this::addCreative);
 
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
+        BeluskaBiomeSources.BIOME_SOURCES.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
