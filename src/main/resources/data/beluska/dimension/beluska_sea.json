@@ -4,11 +4,16 @@
     "type": "minecraft:noise",
     "biome_source": {
       "type": "beluska:beluska",
-      "oceano": "minecraft:ocean",
-      "oceano_quente": "minecraft:warm_ocean",
-      "oceano_frio": "minecraft:frozen_ocean",
-      "planicie": "minecraft:plains",
-      "montanha": "minecraft:windswept_hills"
+      "biomas": {
+        "oceano": "minecraft:ocean",
+        "oceano_quente": "minecraft:warm_ocean",
+        "oceano_frio": "minecraft:deep_frozen_ocean",
+        "praia_de_pedra": "minecraft:stony_shore",
+        "taiga_antiga": "minecraft:old_growth_spruce_taiga",
+        "taiga_nevada": "minecraft:snowy_taiga",
+        "espinhos_de_gelo": "minecraft:ice_spikes",
+        "montanha": "minecraft:windswept_hills"
+      }
     },
     "settings": "beluska:beluska_sea"
   }

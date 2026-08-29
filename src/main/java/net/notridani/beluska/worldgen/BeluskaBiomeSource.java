@@ -2,56 +2,26 @@ package net.notridani.beluska.worldgen;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.QuartPos;
-
 import net.minecraft.core.Holder;
+import net.minecraft.core.QuartPos;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeSource;
 import net.minecraft.world.level.biome.Climate;
 
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class BeluskaBiomeSource extends BiomeSource {
 
     public static final MapCodec<BeluskaBiomeSource> CODEC =
-            RecordCodecBuilder.mapCodec(instance -> instance.group(
+            Codec.unboundedMap(Codec.STRING, Biome.CODEC)
+                    .xmap(BeluskaBiomeSource::new, source -> source.biomas)
+                    .fieldOf("biomas");
 
-                    Biome.CODEC.fieldOf("oceano")
-                            .forGetter(source -> source.oceano),
+    private final Map<String, Holder<Biome>> biomas;
 
-                    Biome.CODEC.fieldOf("oceano_quente")
-                            .forGetter(source -> source.oceano_quente),
-
-                    Biome.CODEC.fieldOf("oceano_frio")
-                            .forGetter(source -> source.oceano_frio),
-
-                    Biome.CODEC.fieldOf("planicie")
-                            .forGetter(source -> source.planicie),
-
-                    Biome.CODEC.fieldOf("montanha")
-                            .forGetter(source -> source.montanha)
-
-            ).apply(instance, BeluskaBiomeSource::new));
-
-    private final Holder<Biome> oceano;
-    private final Holder<Biome> oceano_quente;
-    private final Holder<Biome> oceano_frio;
-    private final Holder<Biome> planicie;
-    private final Holder<Biome> montanha;
-
-    public BeluskaBiomeSource(
-            Holder<Biome> oceano,
-            Holder<Biome> oceano_quente,
-            Holder<Biome> oceano_frio,
-            Holder<Biome> planicie,
-            Holder<Biome> montanha
-    ) {
-        this.oceano = oceano;
-        this.oceano_quente = oceano_quente;
-        this.oceano_frio = oceano_frio;
-        this.planicie = planicie;
-        this.montanha = montanha;
+    public BeluskaBiomeSource(Map<String, Holder<Biome>> biomas) {
+        this.biomas = biomas;
     }
 
     @Override
@@ -61,13 +31,15 @@ public class BeluskaBiomeSource extends BiomeSource {
 
     @Override
     protected Stream<Holder<Biome>> collectPossibleBiomes() {
-        return Stream.of(
-                oceano,
-                oceano_quente,
-                oceano_frio,
-                planicie,
-                montanha
-        );
+        return biomas.values().stream();
+    }
+
+    private Holder<Biome> bioma(String nome) {
+        Holder<Biome> b = biomas.get(nome);
+        if (b == null) {
+            throw new IllegalStateException("Bioma não encontrado na config: " + nome);
+        }
+        return b;
     }
 
     @Override
@@ -77,57 +49,35 @@ public class BeluskaBiomeSource extends BiomeSource {
             int quartZ,
             Climate.Sampler sampler
     ) {
-        Climate.TargetPoint clima =
-                sampler.sample(quartX, quartY, quartZ);
+        Climate.TargetPoint clima = sampler.sample(quartX, quartY, quartZ);
 
-        float continente =
-                Climate.unquantizeCoord(clima.continentalness());
-
-        float erosao =
-                Climate.unquantizeCoord(clima.erosion());
-
-        float profundidade =
-                Climate.unquantizeCoord(clima.depth());
-
-        float temperatura =
-                Climate.unquantizeCoord(clima.temperature());
+        float profundidade = Climate.unquantizeCoord(clima.depth());
+        float temperatura = Climate.unquantizeCoord(clima.temperature());
 
         int blockY = QuartPos.toBlock(quartY);
 
-        // Oceano
-
-        if (blockY < 171) {
-
-            if(temperatura > 0.5) {
-                return oceano_quente;
-            }
-
-
-            if(temperatura < -0.5) {
-                return oceano_frio;
-            }
-
-
-            return oceano;
-
-        }
-
         if (blockY > 170) {
-
-            // Montanha
-            if (profundidade < -1.0f) {
-                return montanha;
+            if(profundidade < -1.0f) {
+                return bioma("montanha");
             }
+
+            if (temperatura > 0.6) return bioma("taiga_antiga");
+            if (temperatura > 0.3) return bioma("praia_de_pedra");
+            if (temperatura > -0.2) return bioma("taiga_nevada");
+            if (temperatura > -0.8) return bioma("espinhos_de_gelo");
+
+            }
+
+        if (blockY > 150) {
+            if (temperatura < 0.5) return bioma("oceano_frio");
+            return bioma("oceano");
         }
 
-        // Planície
-        return planicie;
+        if (blockY > 100 && blockY < 150) {
+           return bioma("oceano_quente");
+        }
 
 
-
-
-
-
-
+        return bioma("oceano_frio");
     }
 }
