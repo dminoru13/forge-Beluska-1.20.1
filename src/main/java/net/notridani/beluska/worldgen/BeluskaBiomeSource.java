@@ -3,6 +3,7 @@ package net.notridani.beluska.worldgen;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.QuartPos;
 
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
@@ -19,6 +20,12 @@ public class BeluskaBiomeSource extends BiomeSource {
                     Biome.CODEC.fieldOf("oceano")
                             .forGetter(source -> source.oceano),
 
+                    Biome.CODEC.fieldOf("oceano_quente")
+                            .forGetter(source -> source.oceano_quente),
+
+                    Biome.CODEC.fieldOf("oceano_frio")
+                            .forGetter(source -> source.oceano_frio),
+
                     Biome.CODEC.fieldOf("planicie")
                             .forGetter(source -> source.planicie),
 
@@ -28,15 +35,21 @@ public class BeluskaBiomeSource extends BiomeSource {
             ).apply(instance, BeluskaBiomeSource::new));
 
     private final Holder<Biome> oceano;
+    private final Holder<Biome> oceano_quente;
+    private final Holder<Biome> oceano_frio;
     private final Holder<Biome> planicie;
     private final Holder<Biome> montanha;
 
     public BeluskaBiomeSource(
             Holder<Biome> oceano,
+            Holder<Biome> oceano_quente,
+            Holder<Biome> oceano_frio,
             Holder<Biome> planicie,
             Holder<Biome> montanha
     ) {
         this.oceano = oceano;
+        this.oceano_quente = oceano_quente;
+        this.oceano_frio = oceano_frio;
         this.planicie = planicie;
         this.montanha = montanha;
     }
@@ -50,6 +63,8 @@ public class BeluskaBiomeSource extends BiomeSource {
     protected Stream<Holder<Biome>> collectPossibleBiomes() {
         return Stream.of(
                 oceano,
+                oceano_quente,
+                oceano_frio,
                 planicie,
                 montanha
         );
@@ -74,17 +89,45 @@ public class BeluskaBiomeSource extends BiomeSource {
         float profundidade =
                 Climate.unquantizeCoord(clima.depth());
 
+        float temperatura =
+                Climate.unquantizeCoord(clima.temperature());
+
+        int blockY = QuartPos.toBlock(quartY);
+
         // Oceano
-        if (continente < -0.4f) {
+
+        if (blockY < 171) {
+
+            if(temperatura > 0.5) {
+                return oceano_quente;
+            }
+
+
+            if(temperatura < -0.5) {
+                return oceano_frio;
+            }
+
+
             return oceano;
+
         }
 
-        // Montanha
-        if (profundidade < -1.0f) {
-            return montanha;
+        if (blockY > 170) {
+
+            // Montanha
+            if (profundidade < -1.0f) {
+                return montanha;
+            }
         }
 
         // Planície
         return planicie;
+
+
+
+
+
+
+
     }
 }

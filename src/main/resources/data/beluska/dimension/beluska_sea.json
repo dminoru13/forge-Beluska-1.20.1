@@ -5,6 +5,8 @@
     "biome_source": {
       "type": "beluska:beluska",
       "oceano": "minecraft:ocean",
+      "oceano_quente": "minecraft:warm_ocean",
+      "oceano_frio": "minecraft:frozen_ocean",
       "planicie": "minecraft:plains",
       "montanha": "minecraft:windswept_hills"
     },
