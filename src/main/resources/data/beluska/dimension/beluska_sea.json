@@ -20,13 +20,7 @@
         "fenda_abissal": "alexscaves:abyssal_chasm",
         
         
-        "labirinto_gelado": "aquamirae:ice_maze",
-        
-        "floresta_de_ossos": "aquatica:abyssal_bonefields",
-        "deserto_abissal": "aquatica:abysmal_void",
-        "floresta_hadal": "aquatica:hadal_forest",
-        "vale_hidrotermal": "aquatica:hydrothermal_valley",
-        "gramado_abissal": "aquatica:sea_pen_grove"
+        "labirinto_gelado": "aquamirae:ice_maze"
       }
     },
     "settings": "beluska:beluska_sea"
