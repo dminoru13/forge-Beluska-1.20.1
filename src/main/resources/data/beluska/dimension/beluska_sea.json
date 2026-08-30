@@ -14,8 +14,19 @@
         "taiga_nevada": "minecraft:snowy_taiga",
         "espinhos_de_gelo": "minecraft:ice_spikes",
         "montanha": "minecraft:windswept_hills",
+        "delta_basalto": "minecraft:basalt_deltas",
+        
+        
         "fenda_abissal": "alexscaves:abyssal_chasm",
-        "labirinto_gelado": "aquamirae:ice_maze"
+        
+        
+        "labirinto_gelado": "aquamirae:ice_maze",
+        
+        "floresta_de_ossos": "aquatica:abyssal_bonefields",
+        "deserto_abissal": "aquatica:abysmal_void",
+        "floresta_hadal": "aquatica:hadal_forest",
+        "vale_hidrotermal": "aquatica:hydrothermal_valley",
+        "gramado_abissal": "aquatica:sea_pen_grove"
       }
     },
     "settings": "beluska:beluska_sea"
