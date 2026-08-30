@@ -70,8 +70,10 @@ public class BeluskaBiomeSource extends BiomeSource {
             }
 
         if (blockY > 150) {
-            if (temperatura < -0.7) return bioma("oceano_muito_frio");
-            if (temperatura < 0.5) return bioma("oceano_frio");
+            if (temperatura < -0.7) return bioma("labirinto_gelado");
+            if (temperatura < -0.5) return bioma("oceano_muito_frio");
+            if (temperatura < -0.2) return bioma("oceano_frio");
+            if (temperatura < 0.1) return bioma("montanha");
             return bioma("oceano");
         }
 
@@ -87,6 +89,6 @@ public class BeluskaBiomeSource extends BiomeSource {
         }
 
 
-        return bioma("oceano_frio");
+        return bioma("oceano_muito_frio");
     }
 }
