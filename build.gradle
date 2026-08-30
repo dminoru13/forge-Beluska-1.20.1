@@ -135,11 +135,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation fg.deobf("maven.modrinth:citadel:mL5pYWWo")
-    implementation fg.deobf("maven.modrinth:alexs-caves:aQbhVUVf") // 2.0.1
-    implementation fg.deobf("maven.modrinth:geckolib:aC5KMoNg")
-    implementation fg.deobf("maven.modrinth:fragmentum:1nysmgB4")
-    implementation fg.deobf("maven.modrinth:aquamirae:72GwOBcB") // 7.1.13
+
 
 }
 

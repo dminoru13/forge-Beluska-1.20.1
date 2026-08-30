@@ -14,13 +14,10 @@
         "taiga_nevada": "minecraft:snowy_taiga",
         "espinhos_de_gelo": "minecraft:ice_spikes",
         "montanha": "minecraft:windswept_hills",
-        "delta_basalto": "minecraft:basalt_deltas",
+        "delta_basalto": "minecraft:basalt_deltas"
         
         
-        "fenda_abissal": "alexscaves:abyssal_chasm",
-        
-        
-        "labirinto_gelado": "aquamirae:ice_maze"
+
       }
     },
     "settings": "beluska:beluska_sea"

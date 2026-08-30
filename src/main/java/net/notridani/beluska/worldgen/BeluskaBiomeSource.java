@@ -18,6 +18,9 @@ public class BeluskaBiomeSource extends BiomeSource {
                     .xmap(BeluskaBiomeSource::new, source -> source.biomas)
                     .fieldOf("biomas");
 
+    // Cacheado UMA vez — precisa ser a mesma instância usada no registro
+    public static final Codec<BeluskaBiomeSource> INSTANCE_CODEC = CODEC.codec();
+
     private final Map<String, Holder<Biome>> biomas;
 
     public BeluskaBiomeSource(Map<String, Holder<Biome>> biomas) {
@@ -26,7 +29,7 @@ public class BeluskaBiomeSource extends BiomeSource {
 
     @Override
     protected Codec<? extends BiomeSource> codec() {
-        return CODEC.codec();
+        return INSTANCE_CODEC;
     }
 
     @Override
@@ -59,7 +62,7 @@ public class BeluskaBiomeSource extends BiomeSource {
         int blockY = QuartPos.toBlock(quartY);
 
         if (blockY > 170) {
-            if(profundidade < -1.0f) {
+            if (profundidade < -1.0f) {
                 return bioma("montanha");
             }
 
@@ -67,11 +70,9 @@ public class BeluskaBiomeSource extends BiomeSource {
             if (temperatura > 0.3) return bioma("praia_de_pedra");
             if (temperatura > -0.2) return bioma("taiga_nevada");
             if (temperatura > -1.8) return bioma("espinhos_de_gelo");
-
-            }
+        }
 
         if (blockY > 150) {
-            if (temperatura < -0.7) return bioma("labirinto_gelado");
             if (temperatura < -0.5) return bioma("oceano_muito_frio");
             if (temperatura < -0.2) return bioma("oceano_frio");
             if (temperatura < 0.1) return bioma("montanha");
@@ -79,19 +80,8 @@ public class BeluskaBiomeSource extends BiomeSource {
         }
 
         if (blockY > 100 && blockY < 150) {
-           return bioma("oceano_quente");
+            return bioma("oceano_quente");
         }
-
-        if (blockY > 40 && blockY < 100) {
-
-        }
-
-        if (blockY < 50) {
-            if(erosao < 0) {
-                return bioma("fenda_abissal");
-            }
-        }
-
 
         return bioma("oceano_muito_frio");
     }

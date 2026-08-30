@@ -20,6 +20,6 @@ public class BeluskaBiomeSources {
     public static final RegistryObject<Codec<BeluskaBiomeSource>> BELUSKA =
             BIOME_SOURCES.register(
                     "beluska",
-                    () -> BeluskaBiomeSource.CODEC.codec()
+                    () -> BeluskaBiomeSource.INSTANCE_CODEC
             );
 }
