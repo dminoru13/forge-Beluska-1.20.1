@@ -65,11 +65,11 @@
               "type": "minecraft:noise",
               "noise": "minecraft:spaghetti_roughness",
               "xz_scale": 1,
-              "y_scale": 1
+              "y_scale": 2
             },
             "argument2": {
               "type": "minecraft:mul",
-              "argument1": "minecraft:overworld_large_biomes/continents",
+              "argument1": "minecraft:overworld/continents",
               "argument2": 0.35
             }
           }
@@ -78,7 +78,7 @@
           "type": "minecraft:range_choice",
           "input": "minecraft:overworld/depth",
           "min_inclusive": -0.4,
-          "max_exclusive": 0.5,
+          "max_exclusive": -0.5,
           "when_in_range": "minecraft:nether/base_3d_noise",
           "when_out_of_range": 1
         }
