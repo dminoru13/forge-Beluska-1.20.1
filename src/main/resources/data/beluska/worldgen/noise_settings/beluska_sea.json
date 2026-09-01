@@ -111,9 +111,17 @@
         "argument2": {
           "type": "minecraft:range_choice",
           "input": "minecraft:overworld/depth",
-          "min_inclusive": -0.4,
-          "max_exclusive": -0.5,
-          "when_in_range": "minecraft:nether/base_3d_noise",
+          "min_inclusive": -0.5,
+          "max_exclusive": 0.5,
+          "when_in_range": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:mul",
+              "argument1": "minecraft:nether/base_3d_noise",
+              "argument2": -0.1
+            },
+            "argument2": 0.1
+          },
           "when_out_of_range": 1
         }
       },
@@ -121,7 +129,7 @@
         "type": "minecraft:range_choice",
         "input": "minecraft:y",
         "min_inclusive": -64,
-        "max_exclusive": -20,
+        "max_exclusive": -53,
         "when_in_range": 1,
         "when_out_of_range": 0
       }
