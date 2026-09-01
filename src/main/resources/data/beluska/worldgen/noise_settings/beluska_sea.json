@@ -109,20 +109,40 @@
           }
         },
         "argument2": {
-          "type": "minecraft:range_choice",
-          "input": "minecraft:overworld/depth",
-          "min_inclusive": -0.5,
-          "max_exclusive": 0.5,
-          "when_in_range": {
-            "type": "minecraft:mul",
-            "argument1": {
-              "type": "minecraft:mul",
-              "argument1": "minecraft:nether/base_3d_noise",
-              "argument2": -0.1
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:range_choice",
+            "input": "minecraft:overworld/depth",
+            "min_inclusive": -0.4,
+            "max_exclusive": 0.1,
+            "when_in_range": {
+              "type": "minecraft:noise",
+              "noise": "minecraft:spaghetti_roughness",
+              "xz_scale": 3,
+              "y_scale": 6
             },
-            "argument2": 0.1
+            "when_out_of_range": 1
           },
-          "when_out_of_range": 1
+          "argument2": {
+            "type": "minecraft:range_choice",
+            "input": "minecraft:overworld/depth",
+            "min_inclusive": -0.4,
+            "max_exclusive": 0.7,
+            "when_in_range": {
+              "type": "minecraft:mul",
+              "argument1": {
+                "type": "minecraft:mul",
+                "argument1": {
+                  "type": "minecraft:mul",
+                  "argument1": "minecraft:nether/base_3d_noise",
+                  "argument2": 5
+                },
+                "argument2": -0.1
+              },
+              "argument2": 0.1
+            },
+            "when_out_of_range": 1
+          }
         }
       },
       "argument2": {
