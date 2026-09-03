@@ -36,82 +36,110 @@
           "argument1": {
             "type": "minecraft:add",
             "argument1": {
-              "type": "minecraft:add",
-              "argument1": {
-                "type": "minecraft:mul",
-                "argument1": {
-                  "type": "minecraft:square",
-                  "argument": {
-                    "type": "minecraft:mul",
-                    "argument1": {
-                      "type": "minecraft:add",
-                      "argument1": "minecraft:overworld/continents",
-                      "argument2": 1
-                    },
-                    "argument2": 0.5
-                  }
-                },
-                "argument2": 1
-              },
-              "argument2": {
-                "type": "minecraft:y_clamped_gradient",
-                "from_y": 320,
-                "to_y": 100,
-                "from_value": -2.4,
-                "to_value": 0
-              }
-            },
-            "argument2": {
               "type": "minecraft:mul",
               "argument1": {
-                "type": "minecraft:range_choice",
-                "input": "minecraft:overworld/depth",
-                "min_inclusive": -2,
-                "max_exclusive": -0.1,
-                "when_in_range": {
-                  "type": "minecraft:noise",
-                  "noise": "minecraft:spaghetti_roughness",
-                  "xz_scale": 1,
-                  "y_scale": 2
-                },
-                "when_out_of_range": -1
-              },
-              "argument2": {
-                "type": "minecraft:mul",
+                "type": "minecraft:add",
                 "argument1": "minecraft:overworld/continents",
-                "argument2": 0.35
+                "argument2": 1
+              },
+              "argument2": 3
+            },
+            "argument2": {
+              "type": "minecraft:range_choice",
+              "input": "minecraft:overworld/erosion",
+              "min_inclusive": -3,
+              "max_exclusive": 0.5,
+              "when_in_range": {
+                "type": "minecraft:mul",
+                "argument1": {
+                  "type": "minecraft:y_clamped_gradient",
+                  "from_y": 200,
+                  "to_y": 0,
+                  "from_value": -8,
+                  "to_value": 1
+                },
+                "argument2": {
+                  "type": "minecraft:spline",
+                  "spline": {
+                    "coordinate": "minecraft:overworld/continents",
+                    "points": [
+                      {
+                        "location": -2,
+                        "derivative": 0,
+                        "value": 16
+                      },
+                      {
+                        "location": -0.1,
+                        "derivative": 0,
+                        "value": 2
+                      },
+                      {
+                        "location": 0,
+                        "derivative": 0,
+                        "value": 1.4
+                      },
+                      {
+                        "location": 0.1,
+                        "derivative": 0,
+                        "value": 0.8
+                      },
+                      {
+                        "location": 2,
+                        "derivative": 0,
+                        "value": 0.65
+                      }
+                    ]
+                  }
+                }
+              },
+              "when_out_of_range": {
+                "type": "minecraft:y_clamped_gradient",
+                "from_y": 200,
+                "to_y": 0,
+                "from_value": -30,
+                "to_value": 9
               }
             }
           },
           "argument2": {
             "type": "minecraft:mul",
             "argument1": {
-              "type": "minecraft:clamp",
-              "input": {
-                "type": "minecraft:add",
-                "argument1": {
-                  "type": "minecraft:end_islands"
-                },
-                "argument2": {
-                  "type": "minecraft:mul",
-                  "argument1": {
-                    "type": "minecraft:noise",
-                    "noise": "minecraft:spaghetti_roughness",
-                    "xz_scale": 1,
-                    "y_scale": 1
-                  },
-                  "argument2": 0.4
-                }
-              },
-              "min": 0,
-              "max": 1
+              "type": "minecraft:add",
+              "argument1": "minecraft:overworld/caves/spaghetti_roughness_function",
+              "argument2": 0
             },
             "argument2": {
-              "type": "minecraft:y_clamped_gradient",
-              "from_y": 170,
-              "to_y": 230,
-              "from_value": 1.4,
-              "to_value": -3
+              "type": "minecraft:spline",
+              "spline": {
+                "coordinate": "minecraft:overworld/erosion",
+                "points": [
+                  {
+                    "location": -2,
+                    "derivative": 0,
+                    "value": 5
+                  },
+                  {
+                    "location": 0,
+                    "derivative": 0,
+                    "value": 10
+                  },
+                  {
+                    "location": 0.499,
+                    "derivative": 0,
+                    "value": 20
+                  },
+                  {
+                    "location": 0.5,
+                    "derivative": 0,
+                    "value": 50
+                  },
+                  {
+                    "location": 1,
+                    "derivative": 0,
+                    "value": 300
+                  }
+                ]
+              }
             }
           }
         },
@@ -122,7 +150,7 @@
         "input": "minecraft:y",
         "min_inclusive": -64,
         "max_exclusive": -53,
-        "when_in_range": 1000,
+        "when_in_range": 1,
         "when_out_of_range": 0
       }
     },
