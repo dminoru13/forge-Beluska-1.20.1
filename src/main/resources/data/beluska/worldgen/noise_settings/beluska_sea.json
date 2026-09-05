@@ -52,22 +52,61 @@
       "argument1": {
         "type": "minecraft:add",
         "argument1": {
-          "type": "minecraft:noise",
-          "noise": "minecraft:cave_entrance",
-          "xz_scale": 2,
-          "y_scale": 2
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": {
+              "type": "minecraft:noise",
+              "noise": "minecraft:cave_entrance",
+              "xz_scale": 2,
+              "y_scale": 2
+            },
+            "argument2": 0
+          },
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:y_clamped_gradient",
+              "from_y": 120,
+              "to_y": -64,
+              "from_value": -4,
+              "to_value": 10
+            },
+            "argument2": 0.7
+          }
         },
-        "argument2": 1
+        "argument2": {
+          "type": "minecraft:spline",
+          "spline": {
+            "coordinate": "minecraft:overworld/continents",
+            "points": [
+              {
+                "location": -1,
+                "derivative": 0,
+                "value": -6
+              },
+              {
+                "location": 0,
+                "derivative": 0,
+                "value": 1.5
+              },
+              {
+                "location": 1,
+                "derivative": 0,
+                "value": -1
+              },
+              {
+                "location": 2,
+                "derivative": 0,
+                "value": 2
+              }
+            ]
+          }
+        }
       },
       "argument2": {
         "type": "minecraft:mul",
-        "argument1": {
-          "type": "minecraft:y_clamped_gradient",
-          "from_y": 200,
-          "to_y": 0,
-          "from_value": -5,
-          "to_value": 3
-        },
+        "argument1": "minecraft:overworld/base_3d_noise",
         "argument2": 1
       }
     }
