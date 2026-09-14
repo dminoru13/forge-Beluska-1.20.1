@@ -109,7 +109,7 @@
             ],
             "temperature": [
               -0.39,
-              1
+              -0.017500000000000016
             ],
             "humidity": [
               -1,
@@ -130,12 +130,162 @@
               1
             ],
             "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -0.017500000000000016,
+              0.355
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:windswept_gravelly_hills"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0.355,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.33
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:nether_wastes"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0.355,
+              1
+            ],
+            "humidity": [
+              -0.33,
+              0
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:crimson_forest"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0.355,
+              1
+            ],
+            "humidity": [
+              0,
+              0.33
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:basalt_deltas"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0.355,
+              1
+            ],
+            "humidity": [
+              0.33,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:soul_sand_valley"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
               -1,
               1
             ],
             "erosion": [
               -1,
-              -0.455
+              -0.505
             ],
             "temperature": [
               -1,
@@ -165,7 +315,7 @@
             ],
             "erosion": [
               -1,
-              -0.455
+              -0.505
             ],
             "temperature": [
               -0.39,
@@ -195,7 +345,7 @@
             ],
             "erosion": [
               -1,
-              -0.455
+              -0.505
             ],
             "temperature": [
               0.355,
@@ -212,6 +362,66 @@
             "offset": 0
           },
           "biome": "minecraft:old_growth_spruce_taiga"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              1
+            ],
+            "erosion": [
+              -0.505,
+              -0.455
+            ],
+            "temperature": [
+              -1,
+              -0.39
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:snowy_beach"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              1
+            ],
+            "erosion": [
+              -0.505,
+              -0.455
+            ],
+            "temperature": [
+              -0.39,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:beach"
         },
         {
           "parameters": {
@@ -319,36 +529,6 @@
             ],
             "temperature": [
               -1,
-              0.355
-            ],
-            "humidity": [
-              -1,
-              1
-            ],
-            "depth": [
-              -0.505,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "aquamirae:ice_maze"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.745,
-              1
-            ],
-            "erosion": [
-              -0.455,
-              0.645
-            ],
-            "temperature": [
-              0.355,
               1
             ],
             "humidity": [
@@ -361,7 +541,7 @@
             ],
             "offset": 0
           },
-          "biome": "minecraft:deep_lukewarm_ocean"
+          "biome": "minecraft:lukewarm_ocean"
         }
       ],
       "type": "minecraft:multi_noise"

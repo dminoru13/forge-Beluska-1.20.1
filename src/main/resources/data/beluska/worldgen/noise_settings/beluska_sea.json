@@ -482,57 +482,6 @@
       {
         "type": "minecraft:condition",
         "if_true": {
-          "type": "minecraft:stone_depth",
-          "offset": 0,
-          "surface_type": "floor",
-          "add_surface_depth": false,
-          "secondary_depth_range": 0
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:water",
-            "offset": -1,
-            "surface_depth_multiplier": 0,
-            "add_stone_depth": false
-          },
-          "then_run": {
-            "type": "minecraft:condition",
-            "if_true": {
-              "type": "minecraft:hole"
-            },
-            "then_run": {
-              "type": "minecraft:sequence",
-              "sequence": [
-                {
-                  "type": "minecraft:condition",
-                  "if_true": {
-                    "type": "minecraft:water",
-                    "offset": 0,
-                    "surface_depth_multiplier": 0,
-                    "add_stone_depth": false
-                  },
-                  "then_run": {
-                    "type": "minecraft:block",
-                    "result_state": {
-                      "Name": "minecraft:air"
-                    }
-                  }
-                },
-                {
-                  "type": "minecraft:block",
-                  "result_state": {
-                    "Name": "minecraft:ice"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
           "type": "minecraft:vertical_gradient",
           "random_name": "minecraft:bedrock_roof",
           "true_at_and_below": {
@@ -546,6 +495,125 @@
           "type": "minecraft:block",
           "result_state": {
             "Name": "minecraft:bedrock"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:nether_wastes",
+            "minecraft:crimson_forest",
+            "minecraft:basalt_deltas",
+            "minecraft:soul_sand_valley"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:vertical_gradient",
+            "random_name": "lava",
+            "true_at_and_below": {
+              "absolute": -55
+            },
+            "false_at_and_above": {
+              "absolute": -55
+            }
+          },
+          "then_run": {
+            "type": "minecraft:block",
+            "result_state": {
+              "Name": "minecraft:lava"
+            }
+          }
+        }
+      },
+      {
+        "type": "minecraft:sequence",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:nether_wastes"
+          ]
+        },
+        "then_run": {
+          "type": ""
+        },
+        "sequence": [
+          {
+            "type": "minecraft:condition",
+            "if_true": {
+              "type": "minecraft:biome",
+              "biome_is": [
+                "minecraft:nether_wastes",
+                "minecraft:warped_forest",
+                "minecraft:crimson_forest"
+              ]
+            },
+            "then_run": {
+              "type": "minecraft:block",
+              "result_state": {
+                "Name": "minecraft:netherrack"
+              }
+            }
+          },
+          {
+            "type": "minecraft:condition",
+            "if_true": {
+              "type": "minecraft:biome",
+              "biome_is": [
+                "minecraft:soul_sand_valley"
+              ]
+            },
+            "then_run": {
+              "type": "minecraft:block",
+              "result_state": {
+                "Name": "minecraft:soul_soil"
+              }
+            }
+          },
+          {
+            "type": "minecraft:condition",
+            "if_true": {
+              "type": "minecraft:biome",
+              "biome_is": [
+                "minecraft:basalt_deltas"
+              ]
+            },
+            "then_run": {
+              "type": "minecraft:block",
+              "result_state": {
+                "Name": "minecraft:basalt"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:beach",
+            "minecraft:snowy_beach",
+            "minecraft:desert"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:stone_depth",
+            "offset": 0,
+            "surface_type": "floor",
+            "add_surface_depth": true,
+            "secondary_depth_range": 0
+          },
+          "then_run": {
+            "type": "minecraft:block",
+            "result_state": {
+              "Name": "minecraft:sand"
+            }
           }
         }
       },
@@ -603,8 +671,27 @@
           "then_run": {
             "type": "minecraft:block",
             "result_state": {
-              "Name": "minecraft:coarse_dirt"
+              "Name": "minecraft:dirt"
             }
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:vertical_gradient",
+          "random_name": "noise_legal",
+          "true_at_and_below": {
+            "absolute": -5
+          },
+          "false_at_and_above": {
+            "absolute": 0
+          }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:deepslate"
           }
         }
       },
@@ -644,25 +731,6 @@
                 "Name": "minecraft:gravel"
               }
             }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "noise_legal",
-          "true_at_and_below": {
-            "absolute": -5
-          },
-          "false_at_and_above": {
-            "absolute": 0
-          }
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "minecraft:deepslate"
           }
         }
       }
