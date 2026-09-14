@@ -21,9 +21,9 @@
     "fluid_level_floodedness": {
       "type": "minecraft:range_choice",
       "input": "minecraft:overworld_large_biomes/continents",
-      "min_inclusive": 0.63,
+      "min_inclusive": 0.745,
       "max_exclusive": 2,
-      "when_in_range": -2,
+      "when_in_range": -1,
       "when_out_of_range": 1
     },
     "fluid_level_spread": 0,
@@ -76,7 +76,14 @@
       "to_value": -2
     },
     "ridges": "minecraft:overworld/ridges",
-    "initial_density_without_jaggedness": 0,
+    "initial_density_without_jaggedness": {
+      "type": "minecraft:range_choice",
+      "input": "y",
+      "min_inclusive": -64,
+      "max_exclusive": 80,
+      "when_in_range": 1,
+      "when_out_of_range": 0
+    },
     "final_density": {
       "type": "minecraft:range_choice",
       "input": "minecraft:y",
@@ -343,7 +350,7 @@
                 "when_out_of_range": {
                   "type": "minecraft:range_choice",
                   "input": "minecraft:overworld_large_biomes/continents",
-                  "min_inclusive": 0.64,
+                  "min_inclusive": 0.745,
                   "max_exclusive": 2,
                   "when_in_range": {
                     "type": "minecraft:range_choice",

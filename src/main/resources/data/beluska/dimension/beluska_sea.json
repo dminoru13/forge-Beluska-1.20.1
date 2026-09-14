@@ -11,6 +11,36 @@
             ],
             "continentalness": [
               -1,
+              -0.585
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -1,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "alexscaves:abyssal_chasm"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.585,
               0.745
             ],
             "erosion": [
@@ -49,6 +79,36 @@
             ],
             "temperature": [
               -1,
+              -0.39
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.505
+            ],
+            "offset": 0
+          },
+          "biome": "alexscaves:primordial_caves"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -0.39,
               1
             ],
             "humidity": [
@@ -61,7 +121,7 @@
             ],
             "offset": 0
           },
-          "biome": "alexscaves:abyssal_chasm"
+          "biome": "minecraft:lush_caves"
         },
         {
           "parameters": {
@@ -181,7 +241,7 @@
             ],
             "offset": 0
           },
-          "biome": "minecraft:lukewarm_ocean"
+          "biome": "alexscaves:abyssal_chasm"
         },
         {
           "parameters": {
@@ -259,6 +319,36 @@
             ],
             "temperature": [
               -1,
+              0.355
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "aquamirae:ice_maze"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.745,
+              1
+            ],
+            "erosion": [
+              -0.455,
+              0.645
+            ],
+            "temperature": [
+              0.355,
               1
             ],
             "humidity": [
@@ -271,7 +361,7 @@
             ],
             "offset": 0
           },
-          "biome": "alexscaves:abyssal_chasm"
+          "biome": "minecraft:deep_lukewarm_ocean"
         }
       ],
       "type": "minecraft:multi_noise"
