@@ -530,6 +530,31 @@
         }
       },
       {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:crimson_forest"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:stone_depth",
+            "offset": 0,
+            "surface_type": "floor",
+            "add_surface_depth": false,
+            "secondary_depth_range": 0
+          },
+          "then_run": {
+            "type": "minecraft:block",
+            "result_state": {
+              "Name": "minecraft:crimson_nylium"
+            }
+          }
+        }
+      },
+      {
         "type": "minecraft:sequence",
         "if_true": {
           "type": "minecraft:biome",
@@ -620,6 +645,25 @@
       {
         "type": "minecraft:condition",
         "if_true": {
+          "type": "minecraft:vertical_gradient",
+          "random_name": "noise_legal",
+          "true_at_and_below": {
+            "absolute": -5
+          },
+          "false_at_and_above": {
+            "absolute": 0
+          }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:deepslate"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
           "type": "minecraft:stone_depth",
           "offset": 0,
           "surface_type": "floor",
@@ -673,25 +717,6 @@
             "result_state": {
               "Name": "minecraft:dirt"
             }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "noise_legal",
-          "true_at_and_below": {
-            "absolute": -5
-          },
-          "false_at_and_above": {
-            "absolute": 0
-          }
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "minecraft:deepslate"
           }
         }
       },

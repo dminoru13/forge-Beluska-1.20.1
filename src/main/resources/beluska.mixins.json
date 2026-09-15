@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.notridani.beluska.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "NetherFortressStructureMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
