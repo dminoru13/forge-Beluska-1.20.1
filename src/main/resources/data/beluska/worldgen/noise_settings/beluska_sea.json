@@ -556,15 +556,6 @@
       },
       {
         "type": "minecraft:sequence",
-        "if_true": {
-          "type": "minecraft:biome",
-          "biome_is": [
-            "minecraft:nether_wastes"
-          ]
-        },
-        "then_run": {
-          "type": ""
-        },
         "sequence": [
           {
             "type": "minecraft:condition",
@@ -648,7 +639,7 @@
           "type": "minecraft:vertical_gradient",
           "random_name": "noise_legal",
           "true_at_and_below": {
-            "absolute": -5
+            "absolute": -3
           },
           "false_at_and_above": {
             "absolute": 0
@@ -747,14 +738,36 @@
               "type": "minecraft:stone_depth",
               "offset": 0,
               "surface_type": "floor",
-              "add_surface_depth": false,
+              "add_surface_depth": true,
               "secondary_depth_range": 0
             },
             "then_run": {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "minecraft:gravel"
-              }
+              "type": "minecraft:sequence",
+              "sequence": [
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "minecraft:cold_ocean",
+                      "minecraft:deep_cold_ocean",
+                      "aquamirae:ice_maze"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:gravel"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "minecraft:sand"
+                  }
+                }
+              ]
             }
           }
         }
