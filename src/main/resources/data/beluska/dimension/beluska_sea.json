@@ -11,7 +11,7 @@
             ],
             "continentalness": [
               -1,
-              -0.585
+              -0.53
             ],
             "erosion": [
               -1,
@@ -23,6 +23,36 @@
             ],
             "humidity": [
               -1,
+              -0.385
+            ],
+            "depth": [
+              -1,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:the_void"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              -0.53
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -1,
+              1
+            ],
+            "humidity": [
+              -0.385,
               1
             ],
             "depth": [
@@ -40,7 +70,7 @@
               1
             ],
             "continentalness": [
-              -0.585,
+              -0.53,
               0.745
             ],
             "erosion": [
@@ -173,7 +203,7 @@
             ],
             "humidity": [
               -1,
-              -0.33
+              -0.385
             ],
             "depth": [
               -1,
@@ -202,37 +232,7 @@
               1
             ],
             "humidity": [
-              -0.33,
-              0
-            ],
-            "depth": [
-              -1,
-              -0.505
-            ],
-            "offset": 0
-          },
-          "biome": "minecraft:crimson_forest"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.745,
-              1
-            ],
-            "erosion": [
-              -1,
-              1
-            ],
-            "temperature": [
-              0.355,
-              1
-            ],
-            "humidity": [
-              0,
+              -0.385,
               0.33
             ],
             "depth": [
@@ -281,11 +281,131 @@
             ],
             "continentalness": [
               -1,
+              -0.53
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -1,
+              -0.39
+            ],
+            "humidity": [
+              -0.385,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "aquamirae:ice_maze"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              -0.53
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -0.39,
+              -0.017500000000000016
+            ],
+            "humidity": [
+              -0.385,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:frozen_river"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              -0.53
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -0.017500000000000016,
+              0.355
+            ],
+            "humidity": [
+              -0.385,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:deep_cold_ocean"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              -0.53
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0.355,
+              1
+            ],
+            "humidity": [
+              -0.385,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "alexscaves:abyssal_chasm"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.53,
               1
             ],
             "erosion": [
               -1,
-              -0.505
+              -0.555
             ],
             "temperature": [
               -1,
@@ -310,12 +430,12 @@
               1
             ],
             "continentalness": [
-              -1,
+              -0.53,
               1
             ],
             "erosion": [
               -1,
-              -0.505
+              -0.555
             ],
             "temperature": [
               -0.39,
@@ -340,12 +460,12 @@
               1
             ],
             "continentalness": [
-              -1,
+              -0.53,
               1
             ],
             "erosion": [
               -1,
-              -0.505
+              -0.555
             ],
             "temperature": [
               0.355,
@@ -370,12 +490,12 @@
               1
             ],
             "continentalness": [
-              -1,
+              -0.53,
               1
             ],
             "erosion": [
-              -0.505,
-              -0.455
+              -0.555,
+              -0.5
             ],
             "temperature": [
               -1,
@@ -400,12 +520,12 @@
               1
             ],
             "continentalness": [
-              -1,
+              -0.53,
               1
             ],
             "erosion": [
-              -0.505,
-              -0.455
+              -0.555,
+              -0.5
             ],
             "temperature": [
               -0.39,
@@ -430,15 +550,105 @@
               1
             ],
             "continentalness": [
-              -1,
-              -0.585
+              -0.53,
+              1
             ],
             "erosion": [
-              -0.455,
+              -0.5,
               0.645
             ],
             "temperature": [
               -1,
+              -0.39
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "aquamirae:ice_maze"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.53,
+              1
+            ],
+            "erosion": [
+              -0.5,
+              0.645
+            ],
+            "temperature": [
+              -0.39,
+              -0.017500000000000016
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:frozen_river"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.53,
+              0.745
+            ],
+            "erosion": [
+              -0.5,
+              0.645
+            ],
+            "temperature": [
+              -0.017500000000000016,
+              0.355
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:frozen_ocean"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.53,
+              0.745
+            ],
+            "erosion": [
+              -0.5,
+              0.645
+            ],
+            "temperature": [
+              0.355,
               1
             ],
             "humidity": [
@@ -451,7 +661,7 @@
             ],
             "offset": 0
           },
-          "biome": "alexscaves:abyssal_chasm"
+          "biome": "minecraft:deep_cold_ocean"
         },
         {
           "parameters": {
@@ -460,7 +670,7 @@
               1
             ],
             "continentalness": [
-              -1,
+              -0.53,
               1
             ],
             "erosion": [
@@ -490,71 +700,11 @@
               1
             ],
             "continentalness": [
-              -0.585,
-              0.745
+              0.745,
+              1
             ],
             "erosion": [
-              -0.455,
-              0.645
-            ],
-            "temperature": [
-              -1,
-              -0.39
-            ],
-            "humidity": [
-              -1,
-              1
-            ],
-            "depth": [
-              -0.505,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "minecraft:deep_cold_ocean"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              -0.585,
-              0.745
-            ],
-            "erosion": [
-              -0.455,
-              0.645
-            ],
-            "temperature": [
-              -0.39,
-              -0.017500000000000016
-            ],
-            "humidity": [
-              -1,
-              1
-            ],
-            "depth": [
-              -0.505,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "minecraft:frozen_ocean"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              -0.585,
-              0.745
-            ],
-            "erosion": [
-              -0.455,
+              -0.5,
               0.645
             ],
             "temperature": [
@@ -571,7 +721,7 @@
             ],
             "offset": 0
           },
-          "biome": "minecraft:frozen_river"
+          "biome": "minecraft:cold_ocean"
         },
         {
           "parameters": {
@@ -580,11 +730,11 @@
               1
             ],
             "continentalness": [
-              -0.585,
-              0.745
+              0.745,
+              1
             ],
             "erosion": [
-              -0.455,
+              -0.5,
               0.645
             ],
             "temperature": [
@@ -601,97 +751,7 @@
             ],
             "offset": 0
           },
-          "biome": "aquamirae:ice_maze"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.745,
-              1
-            ],
-            "erosion": [
-              -0.455,
-              0.645
-            ],
-            "temperature": [
-              -1,
-              -0.39
-            ],
-            "humidity": [
-              -1,
-              1
-            ],
-            "depth": [
-              -0.505,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "aquamirae:ice_maze"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.745,
-              1
-            ],
-            "erosion": [
-              -0.455,
-              0.645
-            ],
-            "temperature": [
-              -0.39,
-              -0.017500000000000016
-            ],
-            "humidity": [
-              -1,
-              1
-            ],
-            "depth": [
-              -0.505,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "minecraft:frozen_river"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.745,
-              1
-            ],
-            "erosion": [
-              -0.455,
-              0.645
-            ],
-            "temperature": [
-              -0.017500000000000016,
-              1
-            ],
-            "humidity": [
-              -1,
-              1
-            ],
-            "depth": [
-              -0.505,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "minecraft:lukewarm_ocean"
+          "biome": "minecraft:warm_ocean"
         }
       ],
       "type": "minecraft:multi_noise"

@@ -24,7 +24,29 @@
       "min_inclusive": 0.745,
       "max_exclusive": 2,
       "when_in_range": -1,
-      "when_out_of_range": 1
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "minecraft:overworld_large_biomes/continents",
+        "min_inclusive": -2,
+        "max_exclusive": -0.53,
+        "when_in_range": {
+          "type": "minecraft:range_choice",
+          "input": {
+            "type": "minecraft:shifted_noise",
+            "noise": "minecraft:vegetation",
+            "shift_x": "minecraft:shift_x",
+            "shift_y": 0,
+            "shift_z": "minecraft:shift_z",
+            "xz_scale": 0.25,
+            "y_scale": 0
+          },
+          "min_inclusive": -2,
+          "max_exclusive": -0.385,
+          "when_in_range": -1,
+          "when_out_of_range": 1
+        },
+        "when_out_of_range": 1
+      }
     },
     "fluid_level_spread": 0,
     "lava": 0,
@@ -82,7 +104,36 @@
       "min_inclusive": -64,
       "max_exclusive": 80,
       "when_in_range": 1,
-      "when_out_of_range": 0
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "minecraft:overworld_large_biomes/continents",
+        "min_inclusive": -2,
+        "max_exclusive": -0.53,
+        "when_in_range": {
+          "type": "minecraft:range_choice",
+          "input": {
+            "type": "minecraft:shifted_noise",
+            "noise": "minecraft:vegetation",
+            "shift_x": "minecraft:shift_x",
+            "shift_y": 0,
+            "shift_z": "minecraft:shift_z",
+            "xz_scale": 0.25,
+            "y_scale": 0
+          },
+          "min_inclusive": -2,
+          "max_exclusive": -0.385,
+          "when_in_range": {
+            "type": "minecraft:range_choice",
+            "input": "y",
+            "min_inclusive": -64,
+            "max_exclusive": 101,
+            "when_in_range": 1,
+            "when_out_of_range": 0
+          },
+          "when_out_of_range": 0
+        },
+        "when_out_of_range": 0
+      }
     },
     "final_density": {
       "type": "minecraft:range_choice",
@@ -628,7 +679,7 @@
           "then_run": {
             "type": "minecraft:block",
             "result_state": {
-              "Name": "minecraft:sand"
+              "Name": "minecraft:sandstone"
             }
           }
         }
