@@ -11,7 +11,7 @@
             ],
             "continentalness": [
               -1,
-              -0.53
+              1
             ],
             "erosion": [
               -1,
@@ -19,11 +19,11 @@
             ],
             "temperature": [
               -1,
-              1
+              -0.985
             ],
             "humidity": [
               -1,
-              -0.385
+              1
             ],
             "depth": [
               -1,
@@ -48,11 +48,11 @@
               1
             ],
             "temperature": [
-              -1,
+              -0.985,
               1
             ],
             "humidity": [
-              -0.385,
+              -1,
               1
             ],
             "depth": [
@@ -78,7 +78,7 @@
               1
             ],
             "temperature": [
-              -1,
+              -0.985,
               1
             ],
             "humidity": [
@@ -108,7 +108,7 @@
               1
             ],
             "temperature": [
-              -1,
+              -0.985,
               -0.39
             ],
             "humidity": [
@@ -288,11 +288,11 @@
               1
             ],
             "temperature": [
-              -1,
+              -0.985,
               -0.39
             ],
             "humidity": [
-              -0.385,
+              -1,
               1
             ],
             "depth": [
@@ -322,7 +322,7 @@
               -0.017500000000000016
             ],
             "humidity": [
-              -0.385,
+              -1,
               1
             ],
             "depth": [
@@ -352,7 +352,7 @@
               0.355
             ],
             "humidity": [
-              -0.385,
+              -1,
               1
             ],
             "depth": [
@@ -382,7 +382,7 @@
               1
             ],
             "humidity": [
-              -0.385,
+              -1,
               1
             ],
             "depth": [
@@ -408,7 +408,7 @@
               -0.555
             ],
             "temperature": [
-              -1,
+              -0.985,
               -0.39
             ],
             "humidity": [
@@ -421,7 +421,7 @@
             ],
             "offset": 0
           },
-          "biome": "minecraft:desert"
+          "biome": "minecraft:snowy_taiga"
         },
         {
           "parameters": {
@@ -439,6 +439,36 @@
             ],
             "temperature": [
               -0.39,
+              -0.017500000000000016
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.505,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "minecraft:old_growth_spruce_taiga"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.53,
+              1
+            ],
+            "erosion": [
+              -1,
+              -0.555
+            ],
+            "temperature": [
+              -0.017500000000000016,
               0.355
             ],
             "humidity": [
@@ -451,7 +481,7 @@
             ],
             "offset": 0
           },
-          "biome": "minecraft:plains"
+          "biome": "minecraft:taiga"
         },
         {
           "parameters": {
@@ -481,7 +511,7 @@
             ],
             "offset": 0
           },
-          "biome": "minecraft:old_growth_spruce_taiga"
+          "biome": "minecraft:cherry_grove"
         },
         {
           "parameters": {
@@ -498,7 +528,7 @@
               -0.5
             ],
             "temperature": [
-              -1,
+              -0.985,
               -0.39
             ],
             "humidity": [
@@ -558,7 +588,7 @@
               0.645
             ],
             "temperature": [
-              -1,
+              -0.985,
               -0.39
             ],
             "humidity": [
@@ -678,7 +708,7 @@
               1
             ],
             "temperature": [
-              -1,
+              -0.985,
               1
             ],
             "humidity": [
