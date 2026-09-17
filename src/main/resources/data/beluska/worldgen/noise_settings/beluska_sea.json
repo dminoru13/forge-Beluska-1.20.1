@@ -87,8 +87,8 @@
       "type": "minecraft:y_clamped_gradient",
       "from_y": 320,
       "to_y": -64,
-      "from_value": 2,
-      "to_value": -2
+      "from_value": 1,
+      "to_value": -1
     },
     "ridges": "minecraft:overworld/ridges",
     "initial_density_without_jaggedness": {
@@ -178,7 +178,7 @@
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
             "min_inclusive": -64,
-            "max_exclusive": 0,
+            "max_exclusive": -45,
             "when_in_range": 1,
             "when_out_of_range": 0
           },
