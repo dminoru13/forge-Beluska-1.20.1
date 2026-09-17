@@ -122,8 +122,19 @@
       }
     },
     "final_density": {
-      "type": "minecraft:interpolated",
-      "argument": {
+      "type": "minecraft:range_choice",
+      "input": {
+        "type": "minecraft:shifted_noise",
+        "noise": "minecraft:temperature",
+        "shift_x": "minecraft:shift_x",
+        "shift_y": 0,
+        "shift_z": "minecraft:shift_z",
+        "xz_scale": 0.25,
+        "y_scale": 0
+      },
+      "min_inclusive": -2,
+      "max_exclusive": -0.985,
+      "when_in_range": {
         "type": "minecraft:range_choice",
         "input": {
           "type": "minecraft:shifted_noise",
@@ -134,57 +145,46 @@
           "xz_scale": 0.25,
           "y_scale": 0
         },
-        "min_inclusive": -2,
-        "max_exclusive": -0.985,
+        "min_inclusive": -0.99,
+        "max_exclusive": 2,
         "when_in_range": {
           "type": "minecraft:range_choice",
-          "input": {
-            "type": "minecraft:shifted_noise",
-            "noise": "minecraft:temperature",
-            "shift_x": "minecraft:shift_x",
-            "shift_y": 0,
-            "shift_z": "minecraft:shift_z",
-            "xz_scale": 0.25,
-            "y_scale": 0
-          },
-          "min_inclusive": -0.99,
-          "max_exclusive": 2,
-          "when_in_range": {
-            "type": "minecraft:range_choice",
-            "input": "minecraft:y",
-            "min_inclusive": -64,
-            "max_exclusive": -50,
-            "when_in_range": 1,
-            "when_out_of_range": 0
-          },
-          "when_out_of_range": {
-            "type": "minecraft:range_choice",
-            "input": "minecraft:y",
-            "min_inclusive": -64,
-            "max_exclusive": -50,
-            "when_in_range": 1,
-            "when_out_of_range": 0
-          }
+          "input": "minecraft:y",
+          "min_inclusive": -64,
+          "max_exclusive": -50,
+          "when_in_range": 1,
+          "when_out_of_range": 0
         },
         "when_out_of_range": {
           "type": "minecraft:range_choice",
           "input": "minecraft:y",
-          "min_inclusive": -54,
-          "max_exclusive": 320,
+          "min_inclusive": -64,
+          "max_exclusive": -50,
+          "when_in_range": 1,
+          "when_out_of_range": 0
+        }
+      },
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "minecraft:y",
+        "min_inclusive": -54,
+        "max_exclusive": 320,
+        "when_in_range": {
+          "type": "minecraft:range_choice",
+          "input": "minecraft:overworld_large_biomes/continents",
+          "min_inclusive": -2,
+          "max_exclusive": -0.53,
           "when_in_range": {
             "type": "minecraft:range_choice",
-            "input": "minecraft:overworld_large_biomes/continents",
-            "min_inclusive": -2,
-            "max_exclusive": -0.53,
-            "when_in_range": {
-              "type": "minecraft:range_choice",
-              "input": "minecraft:y",
-              "min_inclusive": -64,
-              "max_exclusive": 0,
-              "when_in_range": 1,
-              "when_out_of_range": 0
-            },
-            "when_out_of_range": {
+            "input": "minecraft:y",
+            "min_inclusive": -64,
+            "max_exclusive": 0,
+            "when_in_range": 1,
+            "when_out_of_range": 0
+          },
+          "when_out_of_range": {
+            "type": "minecraft:interpolated",
+            "argument": {
               "type": "minecraft:add",
               "argument1": {
                 "type": "minecraft:min",
@@ -550,9 +550,9 @@
                 }
               }
             }
-          },
-          "when_out_of_range": 1
-        }
+          }
+        },
+        "when_out_of_range": 1
       }
     }
   },
