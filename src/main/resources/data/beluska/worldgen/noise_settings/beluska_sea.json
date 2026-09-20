@@ -584,7 +584,7 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "minecraft:the_void"
+            "beluska:oceanic_waterfall"
           ]
         },
         "then_run": {
@@ -639,10 +639,11 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "minecraft:nether_wastes",
-            "minecraft:crimson_forest",
-            "minecraft:basalt_deltas",
-            "minecraft:soul_sand_valley"
+            "beluska:nether_wastes",
+            "beluska:crimson_forest",
+            "beluska:basalt_deltas",
+            "beluska:soul_sand_valley",
+            "beluska:warped_forest"
           ]
         },
         "then_run": {
@@ -670,7 +671,7 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "minecraft:crimson_forest"
+            "beluska:crimson_forest"
           ]
         },
         "then_run": {
@@ -691,6 +692,31 @@
         }
       },
       {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "beluska:warped_forest"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:stone_depth",
+            "offset": 0,
+            "surface_type": "floor",
+            "add_surface_depth": false,
+            "secondary_depth_range": 0
+          },
+          "then_run": {
+            "type": "minecraft:block",
+            "result_state": {
+              "Name": "minecraft:warped_nylium"
+            }
+          }
+        }
+      },
+      {
         "type": "minecraft:sequence",
         "sequence": [
           {
@@ -698,9 +724,9 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "minecraft:nether_wastes",
-                "minecraft:warped_forest",
-                "minecraft:crimson_forest"
+                "beluska:nether_wastes",
+                "beluska:warped_forest",
+                "beluska:crimson_forest"
               ]
             },
             "then_run": {
@@ -715,7 +741,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "minecraft:soul_sand_valley"
+                "beluska:soul_sand_valley"
               ]
             },
             "then_run": {
@@ -730,7 +756,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "minecraft:basalt_deltas"
+                "beluska:basalt_deltas"
               ]
             },
             "then_run": {
@@ -747,9 +773,7 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "minecraft:beach",
-            "minecraft:snowy_beach",
-            "minecraft:desert"
+            "beluska:beluskian_beach"
           ]
         },
         "then_run": {
@@ -880,23 +904,6 @@
             "then_run": {
               "type": "minecraft:sequence",
               "sequence": [
-                {
-                  "type": "minecraft:condition",
-                  "if_true": {
-                    "type": "minecraft:biome",
-                    "biome_is": [
-                      "minecraft:cold_ocean",
-                      "minecraft:deep_cold_ocean",
-                      "aquamirae:ice_maze"
-                    ]
-                  },
-                  "then_run": {
-                    "type": "minecraft:block",
-                    "result_state": {
-                      "Name": "minecraft:gravel"
-                    }
-                  }
-                },
                 {
                   "type": "minecraft:block",
                   "result_state": {
