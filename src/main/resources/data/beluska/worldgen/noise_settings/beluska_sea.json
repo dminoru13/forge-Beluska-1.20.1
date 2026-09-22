@@ -34,7 +34,7 @@
       "when_in_range": -1,
       "when_out_of_range": {
         "type": "minecraft:range_choice",
-        "input": "minecraft:overworld_large_biomes/continents",
+        "input": "minecraft:overworld/continents",
         "min_inclusive": 0.745,
         "max_exclusive": 2,
         "when_in_range": -1,
@@ -64,7 +64,7 @@
       "xz_scale": 0.25,
       "y_scale": 0
     },
-    "continents": "minecraft:overworld_large_biomes/continents",
+    "continents": "minecraft:overworld/continents",
     "erosion": {
       "type": "minecraft:range_choice",
       "input": "minecraft:overworld_large_biomes/erosion",
@@ -171,7 +171,7 @@
         "max_exclusive": 320,
         "when_in_range": {
           "type": "minecraft:range_choice",
-          "input": "minecraft:overworld_large_biomes/continents",
+          "input": "minecraft:overworld/continents",
           "min_inclusive": -2,
           "max_exclusive": -0.53,
           "when_in_range": {
@@ -205,7 +205,7 @@
                       "argument2": {
                         "type": "minecraft:spline",
                         "spline": {
-                          "coordinate": "minecraft:overworld_large_biomes/continents",
+                          "coordinate": "minecraft:overworld/continents",
                           "points": [
                             {
                               "location": -1,
@@ -334,7 +334,7 @@
                 },
                 "argument2": {
                   "type": "minecraft:range_choice",
-                  "input": "minecraft:overworld_large_biomes/continents",
+                  "input": "minecraft:overworld/continents",
                   "min_inclusive": -2,
                   "max_exclusive": 0.6,
                   "when_in_range": {
@@ -381,7 +381,7 @@
                               "location": 0,
                               "derivative": 0,
                               "value": {
-                                "coordinate": "minecraft:overworld_large_biomes/continents",
+                                "coordinate": "minecraft:overworld/continents",
                                 "points": [
                                   {
                                     "location": -1,
@@ -429,7 +429,7 @@
                   },
                   "when_out_of_range": {
                     "type": "minecraft:range_choice",
-                    "input": "minecraft:overworld_large_biomes/continents",
+                    "input": "minecraft:overworld/continents",
                     "min_inclusive": 0.745,
                     "max_exclusive": 2,
                     "when_in_range": {
@@ -584,61 +584,6 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "beluska:oceanic_waterfall"
-          ]
-        },
-        "then_run": {
-          "type": "minecraft:sequence",
-          "sequence": [
-            {
-              "type": "minecraft:condition",
-              "if_true": {
-                "type": "minecraft:stone_depth",
-                "offset": 0,
-                "surface_type": "floor",
-                "add_surface_depth": false,
-                "secondary_depth_range": 0
-              },
-              "then_run": {
-                "type": "minecraft:block",
-                "result_state": {
-                  "Name": "minecraft:water"
-                }
-              }
-            },
-            {
-              "type": "minecraft:condition",
-              "if_true": {
-                "type": "minecraft:vertical_gradient",
-                "random_name": "agua",
-                "true_at_and_below": {
-                  "absolute": -50
-                },
-                "false_at_and_above": {
-                  "absolute": -50
-                }
-              },
-              "then_run": {
-                "type": "minecraft:block",
-                "result_state": {
-                  "Name": "minecraft:water"
-                }
-              }
-            },
-            {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "minecraft:packed_ice"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:biome",
-          "biome_is": [
             "beluska:nether_wastes",
             "beluska:crimson_forest",
             "beluska:basalt_deltas",
@@ -667,131 +612,231 @@
         }
       },
       {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:biome",
-          "biome_is": [
-            "beluska:crimson_forest"
-          ]
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:stone_depth",
-            "offset": 0,
-            "surface_type": "floor",
-            "add_surface_depth": false,
-            "secondary_depth_range": 0
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "minecraft:crimson_nylium"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:biome",
-          "biome_is": [
-            "beluska:warped_forest"
-          ]
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:stone_depth",
-            "offset": 0,
-            "surface_type": "floor",
-            "add_surface_depth": false,
-            "secondary_depth_range": 0
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "minecraft:warped_nylium"
-            }
-          }
-        }
-      },
-      {
         "type": "minecraft:sequence",
         "sequence": [
           {
             "type": "minecraft:condition",
             "if_true": {
-              "type": "minecraft:biome",
-              "biome_is": [
-                "beluska:nether_wastes",
-                "beluska:warped_forest",
-                "beluska:crimson_forest"
-              ]
+              "type": "minecraft:stone_depth",
+              "offset": 0,
+              "surface_type": "floor",
+              "add_surface_depth": false,
+              "secondary_depth_range": 0
             },
             "then_run": {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "minecraft:netherrack"
-              }
+              "type": "minecraft:sequence",
+              "sequence": [
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:frozen_island",
+                      "beluska:tropical_island"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:water",
+                      "offset": 0,
+                      "surface_depth_multiplier": 0,
+                      "add_stone_depth": true
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "minecraft:grass_block"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:oceanic_waterfall"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:water"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:crimson_forest"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:crimson_nylium"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:warped_forest"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:warped_nylium"
+                    }
+                  }
+                }
+              ]
             }
           },
           {
             "type": "minecraft:condition",
             "if_true": {
-              "type": "minecraft:biome",
-              "biome_is": [
-                "beluska:soul_sand_valley"
-              ]
+              "type": "minecraft:stone_depth",
+              "offset": 0,
+              "surface_type": "floor",
+              "add_surface_depth": true,
+              "secondary_depth_range": 0
             },
             "then_run": {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "minecraft:soul_soil"
-              }
+              "type": "minecraft:sequence",
+              "sequence": [
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:beluskian_beach"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:sand"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:hidra_swamp"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:mud"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:frozen_island",
+                      "beluska:tropical_island"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:water",
+                      "offset": 0,
+                      "surface_depth_multiplier": 0,
+                      "add_stone_depth": true
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "minecraft:dirt"
+                      }
+                    }
+                  }
+                }
+              ]
             }
           },
           {
-            "type": "minecraft:condition",
-            "if_true": {
-              "type": "minecraft:biome",
-              "biome_is": [
-                "beluska:basalt_deltas"
-              ]
-            },
-            "then_run": {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "minecraft:basalt"
+            "type": "minecraft:sequence",
+            "sequence": [
+              {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:biome",
+                  "biome_is": [
+                    "beluska:oceanic_waterfall"
+                  ]
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "minecraft:packed_ice"
+                  }
+                }
+              },
+              {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:biome",
+                  "biome_is": [
+                    "beluska:nether_wastes",
+                    "beluska:warped_forest",
+                    "beluska:crimson_forest"
+                  ]
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "minecraft:netherrack"
+                  }
+                }
+              },
+              {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:biome",
+                  "biome_is": [
+                    "beluska:soul_sand_valley"
+                  ]
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "minecraft:soul_soil"
+                  }
+                }
+              },
+              {
+                "type": "minecraft:condition",
+                "if_true": {
+                  "type": "minecraft:biome",
+                  "biome_is": [
+                    "beluska:basalt_deltas"
+                  ]
+                },
+                "then_run": {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "minecraft:blackstone"
+                  }
+                }
               }
-            }
+            ]
           }
         ]
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:biome",
-          "biome_is": [
-            "beluska:beluskian_beach"
-          ]
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:stone_depth",
-            "offset": 0,
-            "surface_type": "floor",
-            "add_surface_depth": true,
-            "secondary_depth_range": 0
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "minecraft:sand"
-            }
-          }
-        }
       },
       {
         "type": "minecraft:condition",
@@ -809,65 +854,6 @@
           "type": "minecraft:block",
           "result_state": {
             "Name": "minecraft:deepslate"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:stone_depth",
-          "offset": 0,
-          "surface_type": "floor",
-          "add_surface_depth": false,
-          "secondary_depth_range": 0
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:water",
-            "offset": -1,
-            "surface_depth_multiplier": 0,
-            "add_stone_depth": false
-          },
-          "then_run": {
-            "type": "minecraft:condition",
-            "if_true": {
-              "type": "minecraft:water",
-              "offset": 0,
-              "surface_depth_multiplier": 0,
-              "add_stone_depth": false
-            },
-            "then_run": {
-              "type": "minecraft:block",
-              "result_state": {
-                "Name": "minecraft:grass_block"
-              }
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:water",
-          "offset": 0,
-          "surface_depth_multiplier": 0,
-          "add_stone_depth": true
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:stone_depth",
-            "offset": 0,
-            "surface_type": "floor",
-            "add_surface_depth": true,
-            "secondary_depth_range": 0
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "minecraft:dirt"
-            }
           }
         }
       },
