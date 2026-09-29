@@ -979,7 +979,7 @@
             ],
             "temperature": [
               -0.96,
-              -0.39
+              0
             ],
             "humidity": [
               -1,
@@ -1008,7 +1008,7 @@
               0.6
             ],
             "temperature": [
-              -0.39,
+              0,
               0.96
             ],
             "humidity": [
@@ -1022,36 +1022,6 @@
             "offset": 0
           },
           "biome": "beluska:candelas_wetland"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.5,
-              1
-            ],
-            "erosion": [
-              -0.7000000000000001,
-              0.6
-            ],
-            "temperature": [
-              -0.39,
-              0
-            ],
-            "humidity": [
-              -0.16,
-              1
-            ],
-            "depth": [
-              -0.45,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "beluska:foggy_reef"
         },
         {
           "parameters": {
