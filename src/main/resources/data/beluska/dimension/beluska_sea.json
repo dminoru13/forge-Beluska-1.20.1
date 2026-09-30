@@ -11,7 +11,7 @@
             ],
             "continentalness": [
               -1,
-              1
+              1.2
             ],
             "erosion": [
               -1,
@@ -101,7 +101,7 @@
             ],
             "continentalness": [
               0.5,
-              1
+              1.19
             ],
             "erosion": [
               -1,
@@ -109,7 +109,67 @@
             ],
             "temperature": [
               -0.96,
-              -0.39
+              0
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.45
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:hidra_swamp"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.5,
+              1.19
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.45
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:candelas_wetland"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              1.19,
+              1.2
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -0.96,
+              -0.675
             ],
             "humidity": [
               -1,
@@ -130,16 +190,16 @@
               1
             ],
             "continentalness": [
-              0.5,
-              1
+              1.19,
+              1.2
             ],
             "erosion": [
               -1,
               1
             ],
             "temperature": [
-              -0.39,
-              0.17500000000000002
+              -0.675,
+              0
             ],
             "humidity": [
               -1,
@@ -151,7 +211,7 @@
             ],
             "offset": 0
           },
-          "biome": "beluska:candelas_wetland"
+          "biome": "alexscaves:forlorn_hollows"
         },
         {
           "parameters": {
@@ -160,8 +220,38 @@
               1
             ],
             "continentalness": [
-              0.5,
+              1.19,
+              1.2
+            ],
+            "erosion": [
+              -1,
               1
+            ],
+            "temperature": [
+              -0.675,
+              -0.39
+            ],
+            "humidity": [
+              -0.16,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.45
+            ],
+            "offset": 0
+          },
+          "biome": "alexscaves:primordial_caves"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              1.19,
+              1.2
             ],
             "erosion": [
               -1,
@@ -190,8 +280,8 @@
               1
             ],
             "continentalness": [
-              0.5,
-              1
+              1.19,
+              1.2
             ],
             "erosion": [
               -1,
@@ -199,36 +289,6 @@
             ],
             "temperature": [
               0,
-              0.17500000000000002
-            ],
-            "humidity": [
-              -0.16,
-              1
-            ],
-            "depth": [
-              -1,
-              -0.45
-            ],
-            "offset": 0
-          },
-          "biome": "beluska:candelas_wetland"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.5,
-              1
-            ],
-            "erosion": [
-              -1,
-              1
-            ],
-            "temperature": [
-              0.17500000000000002,
               1
             ],
             "humidity": [
@@ -250,15 +310,15 @@
               1
             ],
             "continentalness": [
-              0.5,
-              1
+              1.19,
+              1.2
             ],
             "erosion": [
               -1,
               1
             ],
             "temperature": [
-              0.17500000000000002,
+              0,
               1
             ],
             "humidity": [
@@ -280,80 +340,20 @@
               1
             ],
             "continentalness": [
-              0.5,
-              1
+              1.19,
+              1.2
             ],
             "erosion": [
               -1,
               1
             ],
             "temperature": [
-              0.17500000000000002,
+              0,
               1
             ],
             "humidity": [
               -0.16,
               0.19
-            ],
-            "depth": [
-              -1,
-              -0.45
-            ],
-            "offset": 0
-          },
-          "biome": "beluska:crimson_forest"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.5,
-              1
-            ],
-            "erosion": [
-              -1,
-              1
-            ],
-            "temperature": [
-              0.17500000000000002,
-              1
-            ],
-            "humidity": [
-              0.19,
-              0.425
-            ],
-            "depth": [
-              -1,
-              -0.45
-            ],
-            "offset": 0
-          },
-          "biome": "beluska:basalt_deltas"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.5,
-              1
-            ],
-            "erosion": [
-              -1,
-              1
-            ],
-            "temperature": [
-              0.17500000000000002,
-              1
-            ],
-            "humidity": [
-              0.425,
-              1
             ],
             "depth": [
               -1,
@@ -370,8 +370,68 @@
               1
             ],
             "continentalness": [
+              1.19,
+              1.2
+            ],
+            "erosion": [
               -1,
               1
+            ],
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              0.19,
+              0.425
+            ],
+            "depth": [
+              -1,
+              -0.45
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:crimson_forest"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              1.19,
+              1.2
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              0.425,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.45
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:basalt_deltas"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -1,
+              1.2
             ],
             "erosion": [
               -1,
@@ -401,7 +461,7 @@
             ],
             "continentalness": [
               -1,
-              1
+              1.2
             ],
             "erosion": [
               -1,
@@ -431,7 +491,7 @@
             ],
             "continentalness": [
               -1,
-              1
+              1.2
             ],
             "erosion": [
               -1,
@@ -461,7 +521,7 @@
             ],
             "continentalness": [
               -1,
-              1
+              1.2
             ],
             "erosion": [
               -0.765,
@@ -551,7 +611,7 @@
             ],
             "continentalness": [
               -1,
-              1
+              1.2
             ],
             "erosion": [
               -0.7000000000000001,
@@ -581,7 +641,7 @@
             ],
             "continentalness": [
               -1,
-              1
+              1.2
             ],
             "erosion": [
               0.6,
@@ -971,7 +1031,7 @@
             ],
             "continentalness": [
               0.5,
-              1
+              1.2
             ],
             "erosion": [
               -0.7000000000000001,
@@ -1001,7 +1061,7 @@
             ],
             "continentalness": [
               0.5,
-              1
+              1.2
             ],
             "erosion": [
               -0.7000000000000001,
@@ -1013,7 +1073,7 @@
             ],
             "humidity": [
               -1,
-              -0.16
+              1
             ],
             "depth": [
               -0.45,
@@ -1022,36 +1082,6 @@
             "offset": 0
           },
           "biome": "beluska:candelas_wetland"
-        },
-        {
-          "parameters": {
-            "weirdness": [
-              -1,
-              1
-            ],
-            "continentalness": [
-              0.5,
-              1
-            ],
-            "erosion": [
-              -0.7000000000000001,
-              0.6
-            ],
-            "temperature": [
-              0,
-              0.96
-            ],
-            "humidity": [
-              -0.16,
-              1
-            ],
-            "depth": [
-              -0.45,
-              1
-            ],
-            "offset": 0
-          },
-          "biome": "beluska:hidra_swamp"
         }
       ],
       "type": "minecraft:multi_noise"
