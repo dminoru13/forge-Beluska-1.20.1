@@ -17,9 +17,9 @@
       "replace_current_music": false,
       "sound": "minecraft:music.overworld.lush_caves"
     },
-    "sky_color": 8103167,
-    "water_color": 4159204,
-    "water_fog_color": 329011
+    "sky_color": 7907327,
+    "water_color": 3832426,
+    "water_fog_color": 5077600
   },
   "features": [
     [
@@ -47,8 +47,9 @@
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "minecraft:disk_grass",
-      "minecraft:disk_clay"
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
     ],
     [
       "minecraft:glow_lichen",
@@ -64,7 +65,28 @@
       "minecraft:lush_caves_vegetation",
       "minecraft:rooted_azalea_tree",
       "minecraft:spore_blossom",
-      "minecraft:classic_vines_cave_feature"
+      "minecraft:classic_vines_cave_feature",
+      "minecraft:warm_ocean_vegetation",
+      "minecraft:seagrass_warm",
+      "minecraft:sea_pickle"
+    ],
+    [
+      {
+        "feature": "beluska:lanternas",
+        "placement": [
+          {
+            "type": "minecraft:rarity_filter",
+            "chance": 300
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+          }
+        ]
+      }
     ],
     [
       "minecraft:freeze_top_layer"
