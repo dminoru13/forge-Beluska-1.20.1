@@ -83,6 +83,12 @@
                     "waterlogged": "true"
                   }
                 }
+              },
+              {
+                "weight": 0,
+                "data": {
+                  "Name": "minecraft:small_dripleaf"
+                }
               }
             ]
           }
