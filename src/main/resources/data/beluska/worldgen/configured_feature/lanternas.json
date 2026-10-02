@@ -8,15 +8,187 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "minecraft:cobblestone"
+              "Name": "minecraft:lantern"
             }
           }
         }
       },
-      "placement": []
+      "placement": [
+        {
+          "type": "minecraft:height_range",
+          "height": {
+            "absolute": 100
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                -1
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                1
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                -1
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                1
+              ],
+              "blocks": "minecraft:lantern"
+            }
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 1,
+          "target_condition": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:cobblestone",
+              "minecraft:mossy_cobblestone",
+              "minecraft:cracked_stone_bricks",
+              "minecraft:mossy_stone_bricks"
+            ]
+          },
+          "allowed_search_condition": {
+            "type": "minecraft:true"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
     },
-    "tries": 96,
-    "xz_spread": 7,
+    "tries": 15,
+    "xz_spread": 10,
     "y_spread": 0
   }
 }

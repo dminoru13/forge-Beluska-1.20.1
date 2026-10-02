@@ -1,15 +1,14 @@
 {
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 14357621,
+    "separation": 0,
+    "spacing": 3
+  },
   "structures": [
     {
       "structure": "beluska:lamp_lily_pad",
       "weight": 1
     }
-  ],
-  "placement": {
-    "type": "minecraft:random_spread",
-    "spacing": 3,
-    "separation": 1,
-    "spread_type": "triangular",
-    "salt": 2123
-  }
+  ]
 }
