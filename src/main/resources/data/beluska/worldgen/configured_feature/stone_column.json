@@ -56,13 +56,7 @@
               }
             },
             {
-              "height": {
-                "type": "minecraft:uniform",
-                "value": {
-                  "min_inclusive": 1,
-                  "max_inclusive": 20
-                }
-              },
+              "height": 40,
               "provider": {
                 "type": "minecraft:weighted_state_provider",
                 "entries": [
