@@ -85,9 +85,14 @@
                 }
               },
               {
-                "weight": 0,
+                "weight": 1,
                 "data": {
-                  "Name": "minecraft:small_dripleaf"
+                  "Name": "minecraft:small_dripleaf",
+                  "Properties": {
+                    "facing": "north",
+                    "half": "upper",
+                    "waterlogged": "true"
+                  }
                 }
               }
             ]

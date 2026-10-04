@@ -211,6 +211,11 @@
                         "value": 1.21
                       },
                       {
+                        "location": 0.3,
+                        "derivative": 0,
+                        "value": 1.09
+                      },
+                      {
                         "location": 0.5,
                         "derivative": 0,
                         "value": 1.06
@@ -218,7 +223,12 @@
                       {
                         "location": 0.8,
                         "derivative": 0,
-                        "value": 1.01
+                        "value": 1.04
+                      },
+                      {
+                        "location": 1.1,
+                        "derivative": 0,
+                        "value": 1.02
                       }
                     ]
                   }
@@ -505,6 +515,34 @@
       {
         "type": "minecraft:condition",
         "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "beluska:oceanic_waterfall"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:vertical_gradient",
+            "random_name": "agua",
+            "true_at_and_below": {
+              "absolute": -45
+            },
+            "false_at_and_above": {
+              "absolute": -45
+            }
+          },
+          "then_run": {
+            "type": "minecraft:block",
+            "result_state": {
+              "Name": "minecraft:water"
+            }
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
           "type": "minecraft:stone_depth",
           "offset": 0,
           "surface_type": "floor",
@@ -568,34 +606,6 @@
                 }
               }
             ]
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:biome",
-          "biome_is": [
-            "beluska:oceanic_waterfall"
-          ]
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:vertical_gradient",
-            "random_name": "agua",
-            "true_at_and_below": {
-              "absolute": -45
-            },
-            "false_at_and_above": {
-              "absolute": -45
-            }
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "minecraft:water"
-            }
           }
         }
       },
@@ -698,6 +708,36 @@
                       "Name": "minecraft:moss_block"
                     }
                   }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:shallow_beluskian_warm_ocean"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:sand"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:glass_desert"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "cataclysm:azure_seastone"
+                    }
+                  }
                 }
               ]
             }
@@ -781,6 +821,51 @@
                     "type": "minecraft:block",
                     "result_state": {
                       "Name": "minecraft:coarse_dirt"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:foggy_reef"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:blackstone"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:shallow_beluskian_warm_ocean"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "minecraft:sandstone"
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                    "type": "minecraft:biome",
+                    "biome_is": [
+                      "beluska:glass_desert"
+                    ]
+                  },
+                  "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                      "Name": "create:limestone"
                     }
                   }
                 }

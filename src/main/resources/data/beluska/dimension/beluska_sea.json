@@ -11,7 +11,7 @@
             ],
             "continentalness": [
               -1,
-              1.2
+              0.3
             ],
             "erosion": [
               -1,
@@ -71,7 +71,7 @@
             ],
             "continentalness": [
               -0.7000000000000001,
-              0.5
+              0.705
             ],
             "erosion": [
               -1,
@@ -100,7 +100,37 @@
               1
             ],
             "continentalness": [
-              0.5,
+              0.3,
+              1.2
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "temperature": [
+              -1,
+              -0.96
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -1,
+              -0.45
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:oceanic_waterfall"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
               1.19
             ],
             "erosion": [
@@ -130,7 +160,7 @@
               1
             ],
             "continentalness": [
-              0.5,
+              0.705,
               1.19
             ],
             "erosion": [
@@ -611,7 +641,7 @@
             ],
             "continentalness": [
               -1,
-              1.2
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -671,7 +701,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -679,7 +709,7 @@
             ],
             "temperature": [
               -0.96,
-              0.17500000000000002
+              0.36
             ],
             "humidity": [
               -1,
@@ -701,7 +731,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -731,7 +761,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -761,7 +791,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -791,7 +821,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -821,7 +851,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -851,7 +881,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -881,7 +911,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -889,7 +919,7 @@
             ],
             "temperature": [
               0,
-              0.17500000000000002
+              0.36
             ],
             "humidity": [
               -0.44,
@@ -911,14 +941,14 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
               0.6
             ],
             "temperature": [
-              0.17500000000000002,
+              0.36,
               0.5675
             ],
             "humidity": [
@@ -941,14 +971,14 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
               0.6
             ],
             "temperature": [
-              0.17500000000000002,
+              0.36,
               0.5675
             ],
             "humidity": [
@@ -971,14 +1001,14 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
               0.6
             ],
             "temperature": [
-              0.17500000000000002,
+              0.36,
               0.5675
             ],
             "humidity": [
@@ -1001,7 +1031,7 @@
             ],
             "continentalness": [
               -0.35000000000000003,
-              0.5
+              0.3
             ],
             "erosion": [
               -0.7000000000000001,
@@ -1030,7 +1060,157 @@
               1
             ],
             "continentalness": [
-              0.5,
+              0.3,
+              1.2
+            ],
+            "erosion": [
+              -1,
+              -0.7000000000000001
+            ],
+            "temperature": [
+              -1,
+              -0.96
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:oceanic_waterfall"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.3,
+              0.705
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              0.6
+            ],
+            "temperature": [
+              -1,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:shallow_beluskian_warm_ocean"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.3,
+              1.2
+            ],
+            "erosion": [
+              0.6,
+              1
+            ],
+            "temperature": [
+              -1,
+              -0.96
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:oceanic_waterfall"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.3,
+              1.2
+            ],
+            "erosion": [
+              0.6,
+              1
+            ],
+            "temperature": [
+              0.96,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:dragon_peak"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
+              1.2
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              1
+            ],
+            "temperature": [
+              -1,
+              -0.96
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:oceanic_waterfall"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
               1.2
             ],
             "erosion": [
@@ -1039,7 +1219,7 @@
             ],
             "temperature": [
               -0.96,
-              0
+              -0.39
             ],
             "humidity": [
               -1,
@@ -1060,7 +1240,67 @@
               1
             ],
             "continentalness": [
-              0.5,
+              0.705,
+              1.2
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              0.6
+            ],
+            "temperature": [
+              -0.39,
+              0
+            ],
+            "humidity": [
+              -1,
+              0.19
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:glass_desert"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
+              1.2
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              0.6
+            ],
+            "temperature": [
+              -0.39,
+              0
+            ],
+            "humidity": [
+              0.19,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:foggy_reef"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
               1.2
             ],
             "erosion": [
@@ -1073,6 +1313,66 @@
             ],
             "humidity": [
               -1,
+              -0.16
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:candelas_wetland"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
+              1.2
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              0.6
+            ],
+            "temperature": [
+              0,
+              0.36
+            ],
+            "humidity": [
+              -0.16,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:glass_desert"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
+              1.2
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              0.6
+            ],
+            "temperature": [
+              0.36,
+              0.96
+            ],
+            "humidity": [
+              -0.16,
               1
             ],
             "depth": [
@@ -1082,6 +1382,36 @@
             "offset": 0
           },
           "biome": "beluska:candelas_wetland"
+        },
+        {
+          "parameters": {
+            "weirdness": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.705,
+              1.2
+            ],
+            "erosion": [
+              -0.7000000000000001,
+              1
+            ],
+            "temperature": [
+              0.96,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "depth": [
+              -0.45,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beluska:dragon_peak"
         }
       ],
       "type": "minecraft:multi_noise"
