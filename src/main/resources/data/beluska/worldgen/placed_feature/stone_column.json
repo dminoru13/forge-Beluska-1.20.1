@@ -13,6 +13,9 @@
       "height": {
         "absolute": 99
       }
+    },
+    {
+      "type": "minecraft:biome"
     }
   ]
 }

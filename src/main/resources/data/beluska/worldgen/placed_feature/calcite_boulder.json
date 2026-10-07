@@ -1,19 +1,21 @@
 {
-  "feature": "minecraft:iceberg_packed",
+  "feature": "beluska:calcite_boulder",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 1
+      "chance": 19
     },
     {
       "type": "minecraft:in_square"
     },
     {
-      "type": "minecraft:biome"
-    },
-    {
       "type": "minecraft:heightmap",
       "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -7
     }
   ]
 }
